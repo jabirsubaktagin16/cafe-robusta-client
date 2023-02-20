@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:wght@300;400;700;900&family=Open+Sans&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.anton-font {
+  font-family: "Anton", sans-serif !important;
+}
+
+.merriweather-font {
+  font-family: "Merriweather", serif;
+}
+
+.open-sans-font {
+  font-family: "Open Sans", sans-serif;
+}
+
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+}
+
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+}
+
+.coffee-text {
+  color: #d4a373;
+}
+
+#cafe-robusta-header {
+  overflow: hidden;
+  text-align: center;
+}
+#cafe-robusta-header:before,
+#cafe-robusta-header:after {
+  background-color: #d4a373;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  position: relative;
+  vertical-align: middle;
+  width: 20%;
+}
+#cafe-robusta-header:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+#cafe-robusta-header:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
