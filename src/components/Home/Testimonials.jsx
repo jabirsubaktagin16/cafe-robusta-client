@@ -20,7 +20,7 @@ export default function Testimonials() {
           strength={300}
         >
           <div className="">
-            <div className="flex justify-center items-center py-52">
+            <div className="flex justify-center items-center h-[250px] bg-cover bg-no-repeat mb-8 md:h-[500px]">
               <div>
                 <h1 className="text-4xl text-start oswald-font coffee-text">
                   What Our Customers Say...

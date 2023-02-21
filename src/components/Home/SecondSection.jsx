@@ -57,7 +57,7 @@ export default function SecondSection() {
           </div>
         </div>
         <div>
-          <img src={secondBannerImg} alt="Second Banner" />
+          <img src={secondBannerImg} alt="Second Banner" className="w-full" />
           <div className="my-6 text-start">
             <h1 className="text-3xl oswald-font uppercase font-bold text-white">
               Did someone say “Coffee”!

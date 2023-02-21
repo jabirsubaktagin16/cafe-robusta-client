@@ -90,9 +90,16 @@ export default function Header() {
           <img src={logo} className="h-6 mr-3 sm:h-9" alt="Logo" />
         </Link>
         <div className="flex items-center md:order-2">
-          <button
+          <Link
+            to="/"
             type="button"
-            className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            className="text-white bg-primary hover:bg-base-300 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none "
+          >
+            Sign In
+          </Link>
+          {/* <button
+            type="button"
+            className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-2 focus:ring-primary "
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="user-dropdown"
@@ -149,7 +156,7 @@ export default function Header() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <button
             data-collapse-toggle="mobile-menu-2"
             type="button"
