@@ -74,12 +74,12 @@ export default function Header() {
       </li>
 
       <li>
-        <a
-          href="#"
+        <Link
+          to="/reservation"
           className="flex items-center gap-2 py-2 pl-3 pr-4 text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 "
         >
           <FiCoffee /> Book a Table
-        </a>
+        </Link>
       </li>
     </>
   );
@@ -91,9 +91,9 @@ export default function Header() {
         </Link>
         <div className="flex items-center md:order-2">
           <Link
-            to="/"
+            to="/signin"
             type="button"
-            className="text-white bg-primary hover:bg-base-300 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none "
+            className="text-white bg-primary ease-in-out duration-200 hover:bg-base-300 font-medium rounded-lg text-sm px-5 py-2.5"
           >
             Sign In
           </Link>

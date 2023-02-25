@@ -5,7 +5,7 @@ import logo from "../../assets/images/cafe-robusta-logo-white.png";
 export default function TopBanner() {
   return (
     <section
-      className="min-h-screeen"
+      className="min-h-screen"
       style={{
         backgroundImage: `url("https://i.ibb.co/dQBfPYr/top-banner.jpg")`,
         backgroundSize: "cover",
