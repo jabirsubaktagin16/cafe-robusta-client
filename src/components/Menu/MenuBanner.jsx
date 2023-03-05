@@ -13,7 +13,7 @@ export default function MenuBanner() {
           <h1 className="text-4xl text-white oswald-font uppercase font-bold">
             Coffees, Drinks & Foods
           </h1>
-          <p className="mb-5 coffee-text italic merriweather-font">
+          <p className="mb-5 coffee-text italic source-serif-font">
             Café Robusta Coffee Shop & Internet Café / Coffees, Drinks & Food
           </p>
         </div>

@@ -69,27 +69,30 @@ export default function Footer() {
             <div className="mt-8">
               <Link
                 to="/"
-                className="hover:text-primary site-links-text italic merriweather-font"
+                className="hover:text-primary site-links-text italic source-serif-font"
               >
                 Home
               </Link>
               <br />
               <Link
                 to="/menu"
-                className="hover:text-primary site-links-text italic merriweather-font"
+                className="hover:text-primary site-links-text italic source-serif-font"
               >
                 Coffees, Drinks & Foods Menu
               </Link>
               <br />
-              <a className="link link-hover site-links-text italic merriweather-font">
+              <a className="link link-hover site-links-text italic source-serif-font">
                 Our Customer Testimonials
               </a>
               <br />
-              <a className="link link-hover site-links-text italic merriweather-font">
+              <Link
+                to="/aboutus"
+                className="hover:text-primary site-links-text italic source-serif-font"
+              >
                 About Us
-              </a>
+              </Link>
               <br />
-              <a className="link link-hover site-links-text italic merriweather-font">
+              <a className="link link-hover site-links-text italic source-serif-font">
                 Book a Table
               </a>
               <br />

@@ -78,7 +78,7 @@ export default function Header() {
           to="/reservation"
           className="flex items-center gap-2 py-2 pl-3 pr-4 text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 "
         >
-          <FiCoffee /> Book a Table
+          <FiCoffee /> Reservation
         </Link>
       </li>
     </>

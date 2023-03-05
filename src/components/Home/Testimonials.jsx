@@ -28,7 +28,7 @@ export default function Testimonials() {
                 <div className="max-w-screen-sm md:max-w-4xl mt-8">
                   <Slider
                     {...settings}
-                    className="text-white text-2xl merriweather-font"
+                    className="text-white text-2xl source-serif-font"
                   >
                     <div>
                       The sun was setting behind the mountains, casting a warm

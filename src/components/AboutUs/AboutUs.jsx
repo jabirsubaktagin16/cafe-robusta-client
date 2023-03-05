@@ -1,10 +1,12 @@
 import React from "react";
 import { Parallax } from "react-parallax";
-import logo from "../../assets/images/cafe-robusta-logo.png";
+import aboutUs from "../../assets/images/about-us-bg.png";
+import PageTitle from "../Shared/PageTitle";
 
 export default function AboutUs() {
   return (
     <>
+      <PageTitle title="About Us" />
       <Parallax
         bgImage="./about-us-banner.jpg"
         bgImageAlt="About Us Banner Banner"
@@ -18,11 +20,11 @@ export default function AboutUs() {
           </div>
         </div>
       </Parallax>
-      <div className="container mx-auto md:px-20 px-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-6 gap-8 my-10 items-center">
+      <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-6 gap-8 my-10 items-center">
         <div>
-          <img src={logo} alt="logo" />
+          <img src={aboutUs} alt="About Us Background" />
         </div>
-        <div className="text-start">
+        <div className="md:px-20 px-10 text-start">
           <h2 className="text-4xl oswald-font uppercase font-bold">
             Café Robusta
           </h2>

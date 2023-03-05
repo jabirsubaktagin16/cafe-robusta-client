@@ -1,5 +1,6 @@
 import "flowbite";
 import React from "react";
+import "react-day-picker/dist/style.css";
 import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "slick-carousel/slick/slick-theme.css";

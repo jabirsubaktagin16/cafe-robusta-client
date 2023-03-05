@@ -11,7 +11,7 @@ import mocha from "../../assets/images/types/Mocha.png";
 export default function ThirdSection() {
   return (
     <div className="my-20">
-      <p className="text-lg merriweather-font coffee-text italic text-center">
+      <p className="text-lg source-serif-font coffee-text italic text-center">
         We have over 25 different flavors to choose from
       </p>
       <h2 className="text-4xl my-3 oswald-font text-center font-black text-white">
