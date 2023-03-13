@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
 import { Parallax } from "react-parallax";
 import bookingBanner from "../../assets/images/booking-bg.png";
 import PageTitle from "../Shared/PageTitle";
@@ -38,7 +39,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
           <div className="md:px-20 px-10 ">
             <div className="mb-6">
               <label
-                for="date-select"
+                htmlFor="date-select"
                 className="block mb-2 text-lg text-gray-900 source-serif-font font-semibold"
               >
                 Select a Date
@@ -51,7 +52,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
             </div>
             <div className="mb-6">
               <label
-                for="time-select"
+                htmlFor="time-select"
                 className="block mb-2 text-lg text-gray-900 source-serif-font font-semibold"
               >
                 Select a Time
@@ -64,7 +65,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
             </div>
             <div className="mb-6">
               <label
-                for="time-select"
+                htmlFor="time-select"
                 className="block mb-2 text-lg text-gray-900 source-serif-font font-semibold"
               >
                 Select Guest Number(s)
@@ -84,6 +85,13 @@ export default function Booking({ selectedDate, setSelectedDate }) {
                 <option value="More Than 7">More Than 7</option>
               </select>
             </div>
+            <button
+              type="button"
+              class="text-white bg-primary ease-in-out duration-200 hover:bg-base-300 focus:ring-4 focus:outline-none focus:ring-primary font-medium px-5 py-2.5 text-center inline-flex items-center mr-2"
+            >
+              <FaCheck className="w-4 h-4 mr-2 -ml-1" />
+              Confirm
+            </button>
           </div>
         </div>
       </div>

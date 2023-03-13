@@ -1,4 +1,3 @@
-import "flowbite";
 import React from "react";
 import "react-day-picker/dist/style.css";
 import ReactDOM from "react-dom/client";
