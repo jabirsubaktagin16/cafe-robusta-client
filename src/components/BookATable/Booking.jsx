@@ -87,7 +87,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
             </div>
             <button
               type="button"
-              class="text-white bg-primary ease-in-out duration-200 hover:bg-base-300 focus:ring-4 focus:outline-none focus:ring-primary font-medium px-5 py-2.5 text-center inline-flex items-center mr-2"
+              className="text-white bg-primary ease-in-out duration-200 hover:bg-base-300 focus:ring-4 focus:outline-none focus:ring-primary font-medium px-5 py-2.5 text-center inline-flex items-center mr-2"
             >
               <FaCheck className="w-4 h-4 mr-2 -ml-1" />
               Confirm

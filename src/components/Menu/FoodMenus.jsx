@@ -18,7 +18,9 @@ export default function FoodMenus({ categoryName }) {
       </h1>
       <hr className="h-1 w-3/12 my-8 bg-primary border-0 dark:bg-primary"></hr>
       {menus.map((menu) => (
-        <SingleFoodMenu key={menu._id} menu={menu} />
+        <div className="py-5">
+          <SingleFoodMenu key={menu._id} menu={menu} />
+        </div>
       ))}
     </>
   );

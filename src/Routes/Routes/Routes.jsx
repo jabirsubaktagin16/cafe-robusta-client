@@ -9,6 +9,7 @@ import NotFound from "../../components/Shared/NotFound";
 import SignIn from "../../components/SignIn/SignIn";
 import SignUp from "../../components/SignIn/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import { PublicRoute } from "../PublicRoute/PublicRoute";
 
 const router = createBrowserRouter([
   {
@@ -30,11 +31,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/signin",
-        element: <SignIn />,
+        element: (
+          <PublicRoute>
+            <SignIn />
+          </PublicRoute>
+        ),
       },
       {
         path: "/signup",
-        element: <SignUp />,
+        element: (
+          <PublicRoute>
+            <SignUp />
+          </PublicRoute>
+        ),
       },
       {
         path: "/reservation",

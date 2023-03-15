@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 gap-8 px-20 py-10 md:grid-cols-3">
         <div>
           <div className="text-white text-start ">
-            <h4 className="text-2xl oswald-font uppercase font-bold">
+            <h4 className="text-xl oswald-font uppercase font-bold">
               Contact Us
             </h4>
             <p className="mt-8">
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
         <div>
           <div>
-            <h4 className="text-2xl text-start text-white oswald-font uppercase font-bold">
+            <h4 className="text-xl text-start text-white oswald-font uppercase font-bold">
               Opening Hours
             </h4>
             <div className="mt-8 text-xl w-72 oswald-font">
@@ -62,7 +62,7 @@ export default function Footer() {
 
         <div>
           <div className="text-white text-start">
-            <h4 className="text-2xl oswald-font uppercase font-bold">
+            <h4 className="text-xl oswald-font uppercase font-bold">
               Site Links
             </h4>
 
@@ -81,7 +81,7 @@ export default function Footer() {
                 Coffees, Drinks & Foods Menu
               </Link>
               <br />
-              <a className="link link-hover site-links-text italic source-serif-font">
+              <a className="hover:text-primary site-links-text italic source-serif-font">
                 Our Customer Testimonials
               </a>
               <br />
@@ -92,9 +92,12 @@ export default function Footer() {
                 About Us
               </Link>
               <br />
-              <a className="link link-hover site-links-text italic source-serif-font">
+              <Link
+                to="/reservation"
+                className="hover:text-primary site-links-text italic source-serif-font"
+              >
                 Book a Table
-              </a>
+              </Link>
               <br />
             </div>
           </div>
