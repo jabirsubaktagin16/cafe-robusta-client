@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/images/cafe-robusta-logo.png";
 import { AuthContext } from "../../contexts/AuthProvider";
 import useToken from "../../hooks/useToken";
 import PageTitle from "../Shared/PageTitle";
@@ -29,7 +28,7 @@ export default function SignUp() {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        toast("User Created Successfully.");
+        toast.success("User Created Successfully.");
         const userInfo = {
           displayName: data.name,
         };
@@ -40,8 +39,8 @@ export default function SignUp() {
           .catch((err) => console.log(err));
       })
       .catch((error) => {
-        console.log(error);
-        toast.error(error.message);
+        toast.error(error);
+        setSignUPError(error.message);
       });
   };
 
@@ -61,109 +60,135 @@ export default function SignUp() {
   };
 
   return (
-    <>
+    <React.Fragment>
       <PageTitle title="Sign Up" />
-      <section
-        className="min-h-screen"
+      <div
+        className="hero min-h-screen"
         style={{
           backgroundImage: `url("./signup-banner.jpg")`,
-          backgroundSize: "cover",
-          backgroundPosition: "0 0",
-          boxShadow: "inset 0 0 100px black",
         }}
       >
-        <div className="h-screen flex justify-center items-center">
-          <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <img className="mx-auto mb-4 w-28" src={logo} alt="Logo" />
-            <form className="space-y-6" onSubmit={handleSubmit(handleSignUp)}>
-              <h5 className="text-xl font-medium text-center text-gray-900 dark:text-white">
-                Sign Up
-              </h5>
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  {...register("name", {
-                    required: "Name is Required",
-                  })}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
-                  placeholder="Enter Your Name"
-                  required
-                />
-                {errors.name && (
-                  <p className="text-red-500">{errors.name.message}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  {...register("email", {
-                    required: true,
-                  })}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
-                  placeholder="Enter Your Email"
-                  required
-                />
-                {errors.email && (
-                  <p className="text-red-500">{errors.email.message}</p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Your password
-                </label>
-                <input
-                  type="password"
-                  {...register("password", {
-                    required: "Password is required",
-                    minLength: {
-                      value: 6,
-                      message: "Password must be 6 characters long",
-                    },
-                    pattern: {
-                      value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
-                      message:
-                        "Password must have uppercase, number and special characters",
-                    },
-                  })}
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
-                  required
-                />
-                {errors.password && (
-                  <p className="text-red-500">{errors.password.message}</p>
-                )}
-              </div>
-
-              <input
-                className="w-full text-white bg-primary hover:bg-base-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
-                value="Sign Up"
-                type="submit"
-              />
-              <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                Already registered?{" "}
-                <Link to="/signin" className="text-primary hover:underline">
-                  Sign In
-                </Link>
-              </div>
-            </form>
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="text-center text-white lg:text-left">
+            <h1 className="text-5xl anton-font uppercase">Sign Up now!</h1>
+            <p className="py-6 text-lg">
+              By signing up, you'll be able to enjoy a world of perks and
+              benefits. From exclusive offers and discounts, to personalized
+              recommendations and loyalty rewards, being a Café Robusta member
+              means you'll always get the best experience. Plus, you'll be the
+              first to know about new menu items, events, and promotions. Don't
+              miss out, sign up now!
+            </p>
+          </div>
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card-body">
+              <form onSubmit={handleSubmit(handleSignUp)}>
+                {/* Name Input Field */}
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="input input-bordered"
+                    {...register("name", {
+                      required: {
+                        value: true,
+                        message: "Name is required",
+                      },
+                    })}
+                  />
+                  <label className="label">
+                    {errors.name?.type === "required" && (
+                      <span className="label-text-alt text-red-500">
+                        {errors.name.message}
+                      </span>
+                    )}
+                  </label>
+                </div>
+                {/* Email Input Field */}
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="input input-bordered"
+                    {...register("email", {
+                      required: {
+                        value: true,
+                        message: "Email is required",
+                      },
+                      pattern: {
+                        value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                        message: "Provide a valid email",
+                      },
+                    })}
+                  />
+                  <label className="label">
+                    {errors.email?.type === "required" && (
+                      <span className="label-text-alt text-red-500">
+                        {errors.email.message}
+                      </span>
+                    )}
+                    {errors.email?.type === "pattern" && (
+                      <span className="label-text-alt text-red-500">
+                        {errors.email.message}
+                      </span>
+                    )}
+                  </label>
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Password</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Your Password"
+                    className="input input-bordered"
+                    {...register("password", {
+                      required: {
+                        value: true,
+                        message: "Password is required",
+                      },
+                      minLength: {
+                        value: 6,
+                        message: "Must be 6 characters or longer",
+                      },
+                    })}
+                  />
+                  <label className="label">
+                    {errors.password?.type === "required" && (
+                      <span className="label-text-alt text-red-500">
+                        {errors.password.message}
+                      </span>
+                    )}
+                    {errors.password?.type === "minLength" && (
+                      <span className="label-text-alt text-red-500">
+                        {errors.password.message}
+                      </span>
+                    )}
+                  </label>
+                </div>
+                <div className="form-control">
+                  <button className="btn btn-primary">Sign Up</button>
+                </div>
+              </form>
+              <p className="text-center">
+                <small>
+                  Already have an account?{" "}
+                  <Link className="text-primary" to="/signin">
+                    Sign In
+                  </Link>
+                </small>
+              </p>
+            </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </React.Fragment>
   );
 }

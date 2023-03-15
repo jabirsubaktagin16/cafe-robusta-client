@@ -8,6 +8,7 @@ import Menu from "../../components/Menu/Menu";
 import NotFound from "../../components/Shared/NotFound";
 import SignIn from "../../components/SignIn/SignIn";
 import SignUp from "../../components/SignIn/SignUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/reservation",
-        element: <Booking />,
+        element: (
+          <PrivateRoute>
+            <Booking />
+          </PrivateRoute>
+        ),
       },
     ],
   },

@@ -1,15 +1,19 @@
 import React, { useContext } from "react";
 import { FiCoffee } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/cafe-robusta-logo-white.png";
 import { AuthContext } from "../../contexts/AuthProvider";
 
 export default function Header() {
   const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => {
+        localStorage.removeItem("accessToken");
+        navigate("/signin");
+      })
       .catch((err) => console.log(err));
   };
   const menuItems = (
@@ -81,7 +85,7 @@ export default function Header() {
           </label>
           <ul
             tabIndex={0}
-            className="anton-font  menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="anton-font  menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52"
           >
             {menuItems}
           </ul>

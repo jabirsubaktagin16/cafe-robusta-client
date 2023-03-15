@@ -7,10 +7,9 @@ export default function useToken(email) {
       fetch(`http://localhost:8000/api/v1/user/jwt?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
-          if (data.accessToken) {
-            localStorage.setItem("accessToken", data.accessToken);
-            setToken(data.accessToken);
+          if (data?.response?.accessToken) {
+            localStorage.setItem("accessToken", data?.response?.accessToken);
+            setToken(data?.response?.accessToken);
           }
         });
     }
