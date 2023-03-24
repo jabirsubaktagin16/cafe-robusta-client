@@ -12,7 +12,7 @@ export default function SignUp() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { createUser, updateUser } = useContext(AuthContext);
+  const { createUser, updateUser, loading } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const [createdUserEmail, setCreatedUserEmail] = useState("");
   const [token] = useToken(createdUserEmail);
@@ -21,6 +21,8 @@ export default function SignUp() {
   if (token) {
     navigate("/");
   }
+
+  // if (loading) return <Loading />;
 
   const handleSignUp = (data) => {
     setSignUPError("");

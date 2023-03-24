@@ -13,13 +13,13 @@ export default function FoodMenus({ categoryName }) {
 
   return (
     <>
-      <h1 className="text-3xl tracking-widest text-start oswald-font uppercase font-semibold">
+      <h1 className="text-4xl tracking-widest text-start oswald-font uppercase font-semibold">
         {title}
       </h1>
-      <hr className="h-1 w-3/12 my-8 bg-primary border-0 dark:bg-primary"></hr>
+      <hr className="h-1 w-3/12 mt-2 mb-8 bg-primary border-0 dark:bg-primary"></hr>
       {menus.map((menu) => (
-        <div className="py-5">
-          <SingleFoodMenu key={menu._id} menu={menu} />
+        <div className="py-2">
+          <SingleFoodMenu key={menu?.response?._id} menu={menu} />
         </div>
       ))}
     </>

@@ -1,5 +1,7 @@
 import React from "react";
+import { BsTelephoneFill } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
 import { Parallax } from "react-parallax";
 import bookingBanner from "../../assets/images/booking-bg.png";
 import PageTitle from "../Shared/PageTitle";
@@ -82,7 +84,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
-                <option value="More Than 7">More Than 7</option>
+                <option value="More Than 7">More than 7</option>
               </select>
             </div>
             <button
@@ -92,6 +94,21 @@ export default function Booking({ selectedDate, setSelectedDate }) {
               <FaCheck className="w-4 h-4 mr-2 -ml-1" />
               Confirm
             </button>
+            <div className="mt-10">
+              <p className="source-serif-font text-xl">
+                For Full Cafe Reservation, Please Contact us at
+              </p>
+              <div className="my-4">
+                <p className="flex items-center gap-5">
+                  <BsTelephoneFill />
+                  <span>1-585-786-8181</span>
+                </p>
+                <p className="mt-2 flex items-center gap-5">
+                  <GrMail />
+                  <span>cafe.robusta18@gmail.com</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

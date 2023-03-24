@@ -4,7 +4,6 @@ import { toast } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import useToken from "../../hooks/useToken";
-import Loading from "../Shared/Loading";
 import PageTitle from "../Shared/PageTitle";
 
 export default function SignIn() {
@@ -13,7 +12,7 @@ export default function SignIn() {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const { user, loading, signIn } = useContext(AuthContext);
+  const { loading, signIn } = useContext(AuthContext);
   const [loginError, setLoginError] = useState("");
   const [loginUserEmail, setLoginUserEmail] = useState("");
   const [token] = useToken(loginUserEmail);
@@ -22,7 +21,7 @@ export default function SignIn() {
 
   const from = location.state?.from?.pathname || "/";
 
-  if (loading) return <Loading />;
+  // if (loading) return <Loading />;
 
   if (token) {
     navigate(from, { replace: true });

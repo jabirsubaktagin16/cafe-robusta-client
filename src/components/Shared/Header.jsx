@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { FiCoffee } from "react-icons/fi";
+import { GiCoffeeCup } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/cafe-robusta-logo-white.png";
 import { AuthContext } from "../../contexts/AuthProvider";
@@ -25,14 +25,14 @@ export default function Header() {
           aria-current="page"
         >
           <span>
-            <FiCoffee />
+            <GiCoffeeCup />
           </span>
           <span>Home</span>
         </Link>
       </li>
       <li tabIndex={0}>
         <div className="flex gap-2 items-center py-2 md:ml-5 pr-4 uppercase text-white md:p-0 hover:bg-primary md:hover:bg-transparent md:hover:text-primary">
-          <FiCoffee />
+          <GiCoffeeCup />
           <Link to="/menu">Our Menu</Link>
         </div>
 
@@ -50,7 +50,7 @@ export default function Header() {
           to="/aboutUs"
           className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2"
         >
-          <FiCoffee /> About Us
+          <GiCoffeeCup /> About Us
         </Link>
       </li>
       <li>
@@ -58,7 +58,7 @@ export default function Header() {
           to="/reservation"
           className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2"
         >
-          <FiCoffee /> Reservation
+          <GiCoffeeCup /> Reservation
         </Link>
       </li>
     </React.Fragment>

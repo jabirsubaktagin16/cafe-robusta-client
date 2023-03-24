@@ -5,7 +5,7 @@ export default function PageTitle({ title }) {
   return (
     <Helmet>
       <title>
-        {title.length === 0 ? "Café Robusta" : `${title} | Café Robusta`}
+        {title.length === 0 ? "Café Robusta" : `${title} - Café Robusta`}
       </title>
     </Helmet>
   );

@@ -88,7 +88,7 @@ export default function SecondSection() {
               <h1 className="text-4xl text-center text-white oswald-font font-semibold uppercase">
                 Opening Hours
               </h1>
-              <div className="my-6 oswald-font text-3xl">
+              <div className="my-6 oswald-font text-2xl">
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Monday</span>
                   <span>7:00am-5:00pm</span>
