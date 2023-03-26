@@ -17,7 +17,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
       >
         <div className="flex items-center justify-center h-[250px] bg-cover bg-no-repeat mb-8 md:h-[400px]">
           <div className="text-center">
-            <h1 className="text-4xl text-white oswald-font uppercase font-bold">
+            <h1 className="text-4xl text-white barlow-font uppercase font-bold">
               Reservation
             </h1>
           </div>
@@ -25,7 +25,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
       </Parallax>
       <div className="my-20">
         <div className="my-10 flex justify-center items-center flex-col text-center">
-          <h1 className="text-5xl tracking-wider text-base-200 font-bold oswald-font uppercase">
+          <h1 className="text-5xl tracking-wider text-base-200 font-bold barlow-font uppercase">
             Book a Table
           </h1>
           <p className="text-base-300 source-serif-font italic mt-4 md:w-5/12 lg:w-5/12 xl:w-5/12">

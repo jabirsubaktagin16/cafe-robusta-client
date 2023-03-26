@@ -21,7 +21,7 @@ export default function Header() {
       <li>
         <Link
           to="/"
-          className="py-2 pl-3 pr-4 uppercase text-white md:p-0 flex items-center gap-2 hover:bg-primary md:hover:bg-transparent md:hover:text-primary"
+          className="py-2 pl-3 pr-4 uppercase text-white md:p-0 flex items-center gap-2 hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide"
           aria-current="page"
         >
           <span>
@@ -31,24 +31,24 @@ export default function Header() {
         </Link>
       </li>
       <li tabIndex={0}>
-        <div className="flex gap-2 items-center py-2 md:ml-5 pr-4 uppercase text-white md:p-0 hover:bg-primary md:hover:bg-transparent md:hover:text-primary">
+        <div className="flex gap-2 items-center py-2 md:ml-5 pr-4 uppercase text-white md:p-0 hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide">
           <GiCoffeeCup />
           <Link to="/menu">Our Menu</Link>
         </div>
 
-        <ul className="p-2 bg-base-200">
+        <ul className="p-2 bg-base-200 text-white uppercase font-light">
           <li>
-            <a>Submenu 1</a>
+            <a>Hot/Cold Drinks Menu</a>
           </li>
           <li>
-            <a>Submenu 2</a>
+            <a>Food Menu</a>
           </li>
         </ul>
       </li>
       <li>
         <Link
           to="/aboutUs"
-          className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2"
+          className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2 tracking-wide"
         >
           <GiCoffeeCup /> About Us
         </Link>
@@ -56,7 +56,7 @@ export default function Header() {
       <li>
         <Link
           to="/reservation"
-          className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2"
+          className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2 tracking-wide"
         >
           <GiCoffeeCup /> Reservation
         </Link>
@@ -85,7 +85,7 @@ export default function Header() {
           </label>
           <ul
             tabIndex={0}
-            className="anton-font  menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52"
+            className="barlow-font menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52"
           >
             {menuItems}
           </ul>
@@ -95,7 +95,7 @@ export default function Header() {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="anton-font menu menu-horizontal px-1 bg-base-200">
+        <ul className="barlow-font font-semibold menu menu-horizontal px-1 bg-base-200">
           {menuItems}
         </ul>
       </div>

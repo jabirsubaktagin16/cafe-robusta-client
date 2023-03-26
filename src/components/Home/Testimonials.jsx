@@ -22,7 +22,7 @@ export default function Testimonials() {
           <div className="">
             <div className="flex justify-center items-center h-[500px] bg-cover bg-no-repeat mb-8">
               <div>
-                <h1 className="text-4xl text-start oswald-font coffee-text">
+                <h1 className="text-4xl text-start barlow-font coffee-text">
                   What Our Customers Say...
                 </h1>
                 <div className="max-w-screen-sm md:max-w-4xl mt-8">

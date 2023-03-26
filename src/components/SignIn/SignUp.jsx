@@ -73,7 +73,9 @@ export default function SignUp() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center text-white lg:text-left">
-            <h1 className="text-5xl anton-font uppercase">Sign Up now!</h1>
+            <h1 className="text-5xl barlow-font uppercase font-bold">
+              Sign Up now!
+            </h1>
             <p className="py-6 text-lg">
               By signing up, you'll be able to enjoy a world of perks and
               benefits. From exclusive offers and discounts, to personalized

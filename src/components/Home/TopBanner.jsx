@@ -14,7 +14,7 @@ export default function TopBanner() {
     >
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <img className="mx-auto mb-4 w-72" src={logo} alt="Logo" />
-        <h1 className="mb-4 text-8xl font-extrabold tracking-tight leading-none text-white oswald-font uppercase">
+        <h1 className="mb-4 text-8xl font-extrabold tracking-tight leading-none text-white barlow-font uppercase">
           Live Your Best Coffee Life
         </h1>
         <p className="mb-8 text-3xl italic font-bold text-white source-serif-font">

@@ -11,14 +11,14 @@ export default function SingleFoodMenu({ menu }) {
           alt=""
         />
       </div>
-      <div className="col-span-8">
-        <h5 className="mb-2 text-2xl font-bold oswald-font uppercase  text-gray-900 tracking-wide">
+      <div className="col-span-7">
+        <h5 className="mb-2 text-2xl font-bold barlow-font uppercase  text-gray-900 tracking-wide">
           {title}
         </h5>
         <p className="mb-3 font-normal text-primary">{details}</p>
       </div>
-      <div className="col-span-2">
-        <h5 className="mb-2 text-2xl text-end font-bold oswald-font uppercase tracking-wide text-gray-900">
+      <div className="col-span-3">
+        <h5 className="mb-2 text-2xl text-end font-bold barlow-font uppercase tracking-wide text-gray-900">
           ${price}
         </h5>
         <p className="mb-3 bg-primary text-xs md:text-lg font-normal text-center source-serif-font italic">

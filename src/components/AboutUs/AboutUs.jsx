@@ -14,7 +14,7 @@ export default function AboutUs() {
       >
         <div className="flex items-center justify-center h-[250px] bg-cover bg-no-repeat mb-8 md:h-[400px]">
           <div className="text-center">
-            <h1 className="text-4xl text-white oswald-font uppercase font-bold">
+            <h1 className="text-4xl text-white barlow-font uppercase font-bold">
               Café Robusta - About Us
             </h1>
           </div>
@@ -25,7 +25,7 @@ export default function AboutUs() {
           <img src={aboutUs} alt="About Us Background" />
         </div>
         <div className="md:px-20 px-10 text-start">
-          <h2 className="text-4xl oswald-font uppercase font-bold">
+          <h2 className="text-4xl barlow-font uppercase font-bold">
             Café Robusta
           </h2>
           <p className="mt-10 mb-5">
@@ -52,10 +52,10 @@ export default function AboutUs() {
         </div>
       </div>
       <div className="py-8 px-4 mx-auto max-w-4xl lg:py-16 lg:px-12">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none oswald-font uppercase">
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none barlow-font uppercase">
           Our Mission Statement
         </h1>
-        <p className="mt-8 text-2xl uppercase text-center font-bold oswald-font">
+        <p className="mt-8 text-2xl uppercase text-center font-bold barlow-font">
           Café Robusta - PEOPLE OVER PROFITS
         </p>
         <p className="py-6 text-xl">
@@ -68,7 +68,7 @@ export default function AboutUs() {
           all of our guests while serving them superb cuisine and beverages. To
           be the finest stewards of what God has given us.
         </p>
-        <h2 className="text-4xl oswald-font uppercase font-semibold">
+        <h2 className="text-4xl barlow-font uppercase font-semibold">
           Our 4 C's of Focus
         </h2>
         <ol className="list-none mt-5 text-xl">

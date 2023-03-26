@@ -20,7 +20,7 @@ export default function SecondSection() {
   return (
     <div>
       <h1
-        className="text-white text-6xl my-8 text-center anton-font uppercase"
+        className="text-white text-6xl my-8 text-center barlow-font uppercase font-bold"
         id="cafe-robusta-header"
       >
         Café Robusta
@@ -40,7 +40,7 @@ export default function SecondSection() {
               </div>
             </Slider>
             <div className="my-8 text-start">
-              <h1 className="text-3xl oswald-font uppercase font-bold text-white">
+              <h1 className="text-3xl barlow-font uppercase font-bold text-white">
                 LIVE YOUR BEST COFFEE LIFE
               </h1>
               <p className="mt-3 text-gray-300">
@@ -59,7 +59,7 @@ export default function SecondSection() {
         <div>
           <img src={secondBannerImg} alt="Second Banner" className="w-full" />
           <div className="my-6 text-start">
-            <h1 className="text-3xl oswald-font uppercase font-bold text-white">
+            <h1 className="text-3xl barlow-font uppercase font-bold text-white">
               Did someone say “Coffee”!
             </h1>
             <p className="mt-3 text-gray-300">
@@ -85,10 +85,10 @@ export default function SecondSection() {
             }}
           >
             <div className="px-10 py-20">
-              <h1 className="text-4xl text-center text-white oswald-font font-semibold uppercase">
+              <h1 className="text-4xl text-center text-white barlow-font font-semibold uppercase">
                 Opening Hours
               </h1>
-              <div className="my-6 oswald-font text-2xl">
+              <div className="my-6 barlow-font text-2xl">
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Monday</span>
                   <span>7:00am-5:00pm</span>

@@ -23,6 +23,7 @@ specifiers:
   react-hook-form: ^7.43.1
   react-hot-toast: ^2.4.0
   react-icons: ^4.7.1
+  react-loading-skeleton: ^3.2.0
   react-parallax: ^3.5.1
   react-router-dom: ^6.8.1
   react-slick: ^0.29.0
@@ -49,6 +50,7 @@ dependencies:
   react-hook-form: 7.43.1_react@18.2.0
   react-hot-toast: 2.4.0_zunkpj6dptrfkocboupxe72lvq
   react-icons: 4.7.1_react@18.2.0
+  react-loading-skeleton: 3.2.0_react@18.2.0
   react-parallax: 3.5.1_biqbaboplfbrettd7655fr4n2y
   react-router-dom: 6.8.1_biqbaboplfbrettd7655fr4n2y
   react-slick: 0.29.0_biqbaboplfbrettd7655fr4n2y
@@ -2025,6 +2027,14 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-loading-skeleton/3.2.0_react@18.2.0:
+    resolution: {integrity: sha512-kN12x4Ud69jbksr2EdhYywAFeW4bPdvFQ9p3ID1OM/QeFjgwFSmSUY2a6P6uOb5ACzWp3ozY8C+7+04KR6+PHA==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-onclickoutside/6.12.2_biqbaboplfbrettd7655fr4n2y:

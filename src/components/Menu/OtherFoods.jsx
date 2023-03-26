@@ -1,26 +1,16 @@
 import React from "react";
 import FoodMenus from "./FoodMenus";
+import ItemBanner from "./ItemBanner";
 
 export default function OtherFoods() {
   return (
     <>
-      <div
-        className="flex items-center justify-center h-[200px] bg-cover bg-center bg-no-repeat md:h-[250px]"
-        style={{
-          backgroundImage: `url("./menu-header.png")`,
-        }}
-      >
-        <div className="max-w-100">
-          <h1 className="mb-5 text-3xl font-bold text-white oswald-font uppercase">
-            Food Menu
-          </h1>
-        </div>
-      </div>
+      <ItemBanner title="Food Menu" />
       <div className="container mx-auto md:px-20 px-5 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-6 gap-8 my-10">
         <div>
           <FoodMenus categoryName="Sandwiches and Wraps" />
           <div className="mt-5">
-            <h1 className="text-3xl font-bold oswald-font uppercase tracking-wider">
+            <h1 className="text-3xl font-bold barlow-font uppercase tracking-wider">
               + Toppings for Sandwiches and Wraps:
             </h1>
             <p className="mt-5 text-center text-xl text-gray-500 font-semibold">
@@ -32,12 +22,20 @@ export default function OtherFoods() {
             </p>
           </div>
           <div className="mt-5">
-            <h1 className="text-3xl font-bold oswald-font uppercase tracking-wider">
+            <h1 className="text-3xl font-bold barlow-font uppercase tracking-wider">
               + Dressings:
             </h1>
             <p className="mt-5 text-center text-xl text-gray-500 font-semibold">
               Mayo | Ranch | Mustard | Honey Mustard | Italian Blue Cheese |
               Balsamic Vinaigrette
+            </p>
+          </div>
+          <div className="mt-5">
+            <h1 className="text-3xl font-bold barlow-font uppercase tracking-wider">
+              + Cheeses:
+            </h1>
+            <p className="mt-5 text-center text-xl text-gray-500 font-semibold">
+              Provolone | American | Swiss Feta | Cheddar | Mozzarella
             </p>
           </div>
         </div>

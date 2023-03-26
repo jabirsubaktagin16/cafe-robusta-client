@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 gap-8 px-20 py-10 md:grid-cols-3">
         <div>
           <div className="text-white text-start ">
-            <h4 className="text-xl oswald-font uppercase font-bold">
+            <h4 className="text-xl barlow-font uppercase font-bold">
               Contact Us
             </h4>
             <p className="mt-8">
@@ -24,10 +24,10 @@ export default function Footer() {
         </div>
         <div>
           <div>
-            <h4 className="text-xl text-start text-white oswald-font uppercase font-bold">
+            <h4 className="text-xl text-start text-white barlow-font uppercase font-bold">
               Opening Hours
             </h4>
-            <div className="mt-8 text-xl w-72 oswald-font">
+            <div className="mt-8 text-xl w-72 barlow-font">
               <p className="flex justify-between text-white">
                 <span className="uppercase">Monday</span>
                 <span>7:00am-5:00pm</span>
@@ -62,7 +62,7 @@ export default function Footer() {
 
         <div>
           <div className="text-white text-start">
-            <h4 className="text-xl oswald-font uppercase font-bold">
+            <h4 className="text-xl barlow-font uppercase font-bold">
               Site Links
             </h4>
 

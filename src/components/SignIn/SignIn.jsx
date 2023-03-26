@@ -52,7 +52,9 @@ export default function SignIn() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center text-white lg:text-left">
-            <h1 className="text-5xl anton-font uppercase">Sign In now!</h1>
+            <h1 className="text-5xl barlow-font uppercase font-bold">
+              Sign In now!
+            </h1>
             <p className="py-6 text-lg">
               Welcome to Café Robusta, where every sip is an experience. Savor
               the aroma and taste of our handcrafted coffee blends, and enjoy a

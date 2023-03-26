@@ -11,7 +11,7 @@ export default function Extras() {
           <div>
             <img src={music} alt="Music" />
             <div className="my-8 text-start">
-              <h1 className="text-2xl oswald-font text-white">
+              <h1 className="text-3xl barlow-font text-white">
                 Open Mic Night
               </h1>
               <p className="mt-3 text-gray-300">
@@ -35,7 +35,7 @@ export default function Extras() {
           <div>
             <img src={conference} alt="Conference" />
             <div className="my-8 text-start">
-              <h1 className="text-3xl oswald-font text-white">
+              <h1 className="text-3xl barlow-font text-white">
                 Robusta “Gathering” Conference Room
               </h1>
               <p className="mt-3 text-gray-300">
@@ -59,7 +59,7 @@ export default function Extras() {
           <div>
             <img src={gift} alt="Gift" />
             <div className="my-8 text-start">
-              <h1 className="text-3xl oswald-font text-white">
+              <h1 className="text-3xl barlow-font text-white">
                 The Café Robusta Gift Shop
               </h1>
               <p className="mt-3 text-gray-300">
