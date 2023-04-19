@@ -19,7 +19,7 @@ export default function CardSkeleton() {
         <Skeleton count={3} />
       </div>
       <div className="col-span-3">
-        <Skeleton />
+        <Skeleton style={{ width: "50px", float: "right" }} />
         <Skeleton />
       </div>
     </div>

@@ -30,27 +30,27 @@ export default function Footer() {
             <div className="mt-8 text-xl w-72 barlow-font">
               <p className="flex justify-between text-white">
                 <span className="uppercase">Monday</span>
-                <span>7:00am-5:00pm</span>
+                <span>9:30am-11:00pm</span>
               </p>
               <p className="flex justify-between text-white">
                 <span className="uppercase">Tuesday</span>
-                <span>7:00am-5:00pm</span>
+                <span>9:30am-11:00pm</span>
               </p>
               <p className="flex justify-between text-white">
                 <span className="uppercase">Wednesday</span>
-                <span>7:00am-5:00pm</span>
+                <span>9:30am-11:00pm</span>
               </p>
               <p className="flex justify-between text-white">
                 <span className="uppercase">Thursday</span>
-                <span>7:00am-5:00pm</span>
+                <span>9:30am-11:00pm</span>
               </p>
               <p className="flex justify-between text-white">
                 <span className="uppercase">Friday</span>
-                <span>7:00am-5:00pm</span>
+                <span>9:30am-11:00pm</span>
               </p>
               <p className="flex justify-between text-white">
                 <span className="uppercase">Saturday</span>
-                <span>7:00am-5:00pm</span>
+                <span>9:30am-11:00pm</span>
               </p>
               <p className="flex justify-between ">
                 <span className="text-white uppercase">Sunday</span>

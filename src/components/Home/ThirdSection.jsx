@@ -17,7 +17,7 @@ export default function ThirdSection() {
       <h2 className="text-4xl my-3 barlow-font text-center font-black text-white">
         CHOOSE YOUR STYLE / CHOOSE YOUR FLAVOR
       </h2>
-      <div className="container barlow-font uppercase font-bold mx-auto mt-6 md:px-52 px-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 pt-6 gap-x-16 gap-y-12">
+      <div className="container barlow-font uppercase font-bold mx-auto mt-6 md:px-52 px-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 pt-6 gap-x-16 gap-y-12">
         <div className="text-center">
           <img src={americano} alt="Americano" />
           <h6 className="text-xl text-white mt-4">Americano</h6>

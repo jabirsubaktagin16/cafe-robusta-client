@@ -91,27 +91,27 @@ export default function SecondSection() {
               <div className="my-6 barlow-font text-2xl">
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Monday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Tuesday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Wednesday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Thursday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Friday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Saturday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span className="uppercase">Sunday</span>
@@ -136,27 +136,27 @@ export default function SecondSection() {
               <div className="my-6 card-text text-3xl">
                 <p className="flex justify-between text-white">
                   <span>Monday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span>Tuesday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span>Wednesday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span>Thursday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span>Friday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between text-white">
                   <span>Saturday</span>
-                  <span>7:00am-5:00pm</span>
+                  <span>9:30am-11:00pm</span>
                 </p>
                 <p className="flex justify-between ">
                   <span className="text-white">Sunday</span>

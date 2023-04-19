@@ -7,7 +7,6 @@ export default function NotFound() {
   return (
     <>
       <Header />
-
       <div className="flex justify-center items-center">
         <div className="lg:w-5/12">
           <img src={notFound} alt="Not Found Error" />

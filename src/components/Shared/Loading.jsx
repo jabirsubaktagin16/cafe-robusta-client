@@ -7,7 +7,10 @@ export default function Loading() {
     height: 300,
   };
   return (
-    <div className="flex justify-center items-center">
+    <div
+      className="flex justify-center items-center"
+      style={{ minHeight: "100vh" }}
+    >
       <Lottie style={style} animationData={beans} loop={true} />
     </div>
   );

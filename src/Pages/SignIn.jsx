@@ -1,118 +1,74 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthProvider";
-import useToken from "../../hooks/useToken";
-import PageTitle from "../Shared/PageTitle";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Loading from "../components/Shared/Loading";
 
-export default function SignUp() {
+import Footer from "../components/Shared/Footer";
+import Header from "../components/Shared/Header";
+import PageTitle from "../components/Shared/PageTitle";
+import { AuthContext } from "../contexts/AuthProvider";
+import useToken from "../hooks/useToken";
+
+export default function SignIn() {
   const {
     register,
-    handleSubmit,
     formState: { errors },
+    handleSubmit,
   } = useForm();
-  const { createUser, updateUser, loading } = useContext(AuthContext);
-  const [signUpError, setSignUPError] = useState("");
-  const [createdUserEmail, setCreatedUserEmail] = useState("");
-  const [token] = useToken(createdUserEmail);
+  const { loading, signIn } = useContext(AuthContext);
+  const [loginError, setLoginError] = useState("");
+  const [loginUserEmail, setLoginUserEmail] = useState("");
+  const [token] = useToken(loginUserEmail);
+  const location = useLocation();
   const navigate = useNavigate();
 
+  const from = location.state?.from?.pathname || "/";
+
+  if (loading) return <Loading />;
+
   if (token) {
-    navigate("/");
+    navigate(from, { replace: true });
   }
 
-  // if (loading) return <Loading />;
-
-  const handleSignUp = (data) => {
-    setSignUPError("");
-    createUser(data.email, data.password)
+  const handleLogin = (data) => {
+    setLoginError("");
+    signIn(data.email, data.password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        toast.success("User Created Successfully.");
-        const userInfo = {
-          displayName: data.name,
-        };
-        updateUser(userInfo)
-          .then(() => {
-            saveUser(data.name, data.email);
-          })
-          .catch((err) => console.log(err));
+        // console.log(user);
+        setLoginUserEmail(data.email);
       })
       .catch((error) => {
-        toast.error(error);
-        setSignUPError(error.message);
+        toast.error(error.message);
+        setLoginError(error.message);
       });
   };
-
-  const saveUser = (name, email) => {
-    const user = { name, email };
-    fetch("http://localhost:8000/api/v1/user/users", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setCreatedUserEmail(email);
-      });
-  };
-
   return (
     <React.Fragment>
-      <PageTitle title="Sign Up" />
+      <PageTitle title="Sign In" />
+      <Header />
       <div
         className="hero min-h-screen"
         style={{
-          backgroundImage: `url("./signup-banner.jpg")`,
+          backgroundImage: `url("./signin-banner.jpg")`,
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center text-white lg:text-left">
             <h1 className="text-5xl barlow-font uppercase font-bold">
-              Sign Up now!
+              Sign In now!
             </h1>
             <p className="py-6 text-lg">
-              By signing up, you'll be able to enjoy a world of perks and
-              benefits. From exclusive offers and discounts, to personalized
-              recommendations and loyalty rewards, being a Café Robusta member
-              means you'll always get the best experience. Plus, you'll be the
-              first to know about new menu items, events, and promotions. Don't
-              miss out, sign up now!
+              Welcome to Café Robusta, where every sip is an experience. Savor
+              the aroma and taste of our handcrafted coffee blends, and enjoy a
+              cozy and inviting atmosphere. We can't wait to serve you!
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
-              <form onSubmit={handleSubmit(handleSignUp)}>
-                {/* Name Input Field */}
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Name</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="input input-bordered"
-                    {...register("name", {
-                      required: {
-                        value: true,
-                        message: "Name is required",
-                      },
-                    })}
-                  />
-                  <label className="label">
-                    {errors.name?.type === "required" && (
-                      <span className="label-text-alt text-red-500">
-                        {errors.name.message}
-                      </span>
-                    )}
-                  </label>
-                </div>
-                {/* Email Input Field */}
+              <form onSubmit={handleSubmit(handleLogin)}>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
@@ -176,16 +132,24 @@ export default function SignUp() {
                       </span>
                     )}
                   </label>
+                  <label className="label">
+                    <button
+                      // onClick={resetPassword}
+                      className="uppercase label-text-alt btn-link hover:no-underline"
+                    >
+                      Forgot password?
+                    </button>
+                  </label>
                 </div>
                 <div className="form-control">
-                  <button className="btn btn-primary">Sign Up</button>
+                  <button className="btn btn-primary">Sign In</button>
                 </div>
               </form>
               <p className="text-center">
                 <small>
-                  Already have an account?{" "}
-                  <Link className="text-primary" to="/signin">
-                    Sign In
+                  New to Café Robusta?{" "}
+                  <Link className="text-primary" to="/signup">
+                    Create New Account
                   </Link>
                 </small>
               </p>
@@ -193,6 +157,7 @@ export default function SignUp() {
           </div>
         </div>
       </div>
+      <Footer />
     </React.Fragment>
   );
 }

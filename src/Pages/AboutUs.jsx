@@ -1,12 +1,15 @@
 import React from "react";
 import { Parallax } from "react-parallax";
-import aboutUs from "../../assets/images/about-us-bg.png";
-import PageTitle from "../Shared/PageTitle";
+import aboutUs from "../assets/images/about-us-bg.png";
+import Footer from "../components/Shared/Footer";
+import Header from "../components/Shared/Header";
+import PageTitle from "../components/Shared/PageTitle";
 
 export default function AboutUs() {
   return (
     <>
       <PageTitle title="About Us" />
+      <Header />
       <Parallax
         bgImage="./about-us-banner.jpg"
         bgImageAlt="About Us Banner Banner"
@@ -96,53 +99,7 @@ export default function AboutUs() {
           </li>
         </ol>
       </div>
-      {/* <div className="hero my-20">
-        <div className="hero-content text-start">
-          <div className="max-w-4xl">
-            <h1 className="text-6xl">Our Mission Statement</h1>
-            <h2 className="text-4xl text-center mt-8 ">
-              Café Robusta - PEOPLE OVER PROFITS
-            </h2>
-            <p className="py-6 text-xl">
-              We shall value people above profits. Profits will follow if people
-              are prioritized.
-            </p>
-            <p className="pt-2 pb-6 text-xl">
-              <strong>Our Mission:</strong> To offer the most appealing
-              environment in the business by providing great customer service
-              and hospitality to all of our guests while serving them superb
-              cuisine and beverages. To be the finest stewards of what God has
-              given us.
-            </p>
-            <h2 className="text-4xl">Our 4 C's of Focus</h2>
-            <ol className="list-none mt-5 text-xl">
-              <li>
-                <strong>Cleanliness:</strong> We will prioritize cleanliness in
-                order to provide a comfortable and clean environment for our
-                clients and a hygienic environment for our workers to serve and
-                work.
-              </li>
-              <li className="py-2">
-                <strong>Customers:</strong> We shall do everything possible to
-                ensure that our clients are welcomed and treated with decency
-                and respect. Our objective is to make them feel valued and to
-                ensure that they depart feeling better than when they arrived.
-              </li>
-              <li className="py-2">
-                <strong>Coworkers:</strong> We shall treat each colleague as if
-                they were a member of our family, with respect and caring. We
-                shall try our best to encourage one another and to create a
-                welcoming environment.
-              </li>
-              <li className="py-2">
-                <strong>Community:</strong> Through sponsorships, volunteering,
-                contributions, and leadership opportunities, we will participate
-                in and support the communities in which we do business.
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div> */}
+      <Footer />
     </>
   );
 }

@@ -3,13 +3,16 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { Parallax } from "react-parallax";
-import bookingBanner from "../../assets/images/booking-bg.png";
-import PageTitle from "../Shared/PageTitle";
+import bookingBanner from "../assets/images/booking-bg.png";
+import Footer from "../components/Shared/Footer";
+import Header from "../components/Shared/Header";
+import PageTitle from "../components/Shared/PageTitle";
 
 export default function Booking({ selectedDate, setSelectedDate }) {
   return (
     <>
       <PageTitle title="Book a Table" />
+      <Header />
       <Parallax
         bgImage="./reservation.jpg"
         bgImageAlt="Reservation Banner"
@@ -112,6 +115,7 @@ export default function Booking({ selectedDate, setSelectedDate }) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

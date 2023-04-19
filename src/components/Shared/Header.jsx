@@ -21,7 +21,7 @@ export default function Header() {
       <li>
         <Link
           to="/"
-          className="py-2 pl-3 pr-4 uppercase text-white md:p-0 flex items-center gap-2 hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide"
+          className="uppercase text-white md:p-0 flex items-center gap-2 hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide"
           aria-current="page"
         >
           <span>
@@ -31,7 +31,7 @@ export default function Header() {
         </Link>
       </li>
       <li tabIndex={0}>
-        <div className="flex gap-2 items-center py-2 md:ml-5 pr-4 uppercase text-white md:p-0 hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide">
+        <div className="flex gap-2 items-center py-2 lg:ml-5 uppercase text-white hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide">
           <GiCoffeeCup />
           <Link to="/menu">Our Menu</Link>
         </div>
@@ -48,7 +48,7 @@ export default function Header() {
       <li>
         <Link
           to="/aboutUs"
-          className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2 tracking-wide"
+          className="flex gap-2 items-center py-2 lg:ml-5 uppercase text-white hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide"
         >
           <GiCoffeeCup /> About Us
         </Link>
@@ -56,7 +56,7 @@ export default function Header() {
       <li>
         <Link
           to="/reservation"
-          className="py-2 md:ml-5 pr-4 uppercase text-white rounded hover:bg-primary md:hover:bg-transparent md:hover:text-primary md:p-0 flex items-center gap-2 tracking-wide"
+          className="flex gap-2 items-center py-2 lg:ml-5 uppercase text-white hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide"
         >
           <GiCoffeeCup /> Reservation
         </Link>
@@ -70,10 +70,10 @@ export default function Header() {
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 fill-white"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="white"
             >
               <path
                 strokeLinecap="round"
@@ -103,8 +103,8 @@ export default function Header() {
         {user?.uid ? (
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src="https://i.ibb.co/S5DKJdp/avatar.png" />
               </div>
             </label>
             <ul
@@ -112,13 +112,9 @@ export default function Header() {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 text-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
+                <Link to="/dashboard" className="justify-between">
                   Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
+                </Link>
               </li>
               <li>
                 <button onClick={handleLogOut}>Logout</button>
