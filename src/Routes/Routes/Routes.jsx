@@ -6,7 +6,7 @@ import DashboardLayout from "../../Layout/DashboardLayout";
 import AboutUs from "../../Pages/AboutUs";
 import Booking from "../../Pages/Booking";
 import MyProfile from "../../Pages/Dashboard/MyProfile";
-import AddReview from "../../Pages/Dashboard/User/AddReview";
+import Reviews from "../../Pages/Dashboard/User/Reviews";
 import Home from "../../Pages/Home";
 import Menu from "../../Pages/Menu";
 import SignIn from "../../Pages/SignIn";
@@ -71,8 +71,8 @@ const router = createBrowserRouter([
             element: <MyProfile />,
           },
           {
-            path: "/dashboard/add-review",
-            element: <AddReview />,
+            path: "/dashboard/review",
+            element: <Reviews />,
           },
         ],
       },

@@ -21,6 +21,7 @@ export default function useUserDetails(email) {
           navigate("/signin");
           toast("Please Sign In First");
         }
+
         return res.json();
       })
       .then((data) => setCurrentUser(data.response[0]));

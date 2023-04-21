@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import "react-day-picker/dist/style.css";
 import ReactDOM from "react-dom/client";
@@ -10,12 +11,16 @@ import App from "./App";
 import AuthProvider from "./contexts/AuthProvider";
 import "./index.css";
 
+const queryClient = new QueryClient();
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <SkeletonTheme baseColor="#dee2e6" highlightColor="#e9ecef">
-    <HelmetProvider>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </HelmetProvider>
-  </SkeletonTheme>
+  <QueryClientProvider client={queryClient}>
+    <SkeletonTheme baseColor="#dee2e6" highlightColor="#e9ecef">
+      <HelmetProvider>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </HelmetProvider>
+    </SkeletonTheme>
+  </QueryClientProvider>
 );

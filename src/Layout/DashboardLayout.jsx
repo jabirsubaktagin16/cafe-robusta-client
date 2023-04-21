@@ -76,9 +76,9 @@ export default function DashboardLayout() {
                   </Link>
                 </li>
                 <li className="hover:bg-primary ease-in-out duration-300">
-                  <Link to="/dashboard/add-review" className="gap-6">
+                  <Link to="/dashboard/review" className="gap-6">
                     <AiFillEdit />
-                    Add a Review
+                    Review
                   </Link>
                 </li>
               </ul>
