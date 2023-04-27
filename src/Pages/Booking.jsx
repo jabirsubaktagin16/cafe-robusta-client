@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { Parallax } from "react-parallax";
+import { useNavigate } from "react-router-dom";
 import bookingBanner from "../assets/images/booking-bg.png";
 import Footer from "../components/Shared/Footer";
 import Header from "../components/Shared/Header";
 import PageTitle from "../components/Shared/PageTitle";
+import { AuthContext } from "../contexts/AuthProvider";
+import useUserDetails from "../hooks/useUserDetails";
 
-export default function Booking({ selectedDate, setSelectedDate }) {
+export default function Booking() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const { user } = useContext(AuthContext);
+
+  const currentEmail = user?.email;
+
+  const [currentUser] = useUserDetails(currentEmail);
+
+  const navigate = useNavigate();
+
+  if (!currentUser) return;
+
   return (
     <>
       <PageTitle title="Book a Table" />

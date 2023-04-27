@@ -20,14 +20,6 @@ export default function Extras() {
                 anyone who would like to play a song, sing… Stay tuned for more
                 information, dates and times.
               </p>
-              <div className="my-8">
-                <a
-                  href="#"
-                  className="banner-button text-white bg-primary font-bold uppercase ease-in-out duration-300 border border-primary px-8 py-4 hover:bg-base-300 hover:border-white"
-                >
-                  Coming Soon
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -44,14 +36,6 @@ export default function Extras() {
                 private meetings and public use when not booked. Click on the
                 button below for more information and/or to book a reservation.
               </p>
-              <div className="my-8">
-                <a
-                  href="#"
-                  className="banner-button text-white bg-primary font-bold uppercase ease-in-out duration-300 border border-primary px-8 py-4 hover:bg-base-300 hover:border-white"
-                >
-                  Learn More
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -68,14 +52,6 @@ export default function Extras() {
                 Monday – Friday from 7:00 am until 5:00 pm and on Saturdays from
                 8:00 am until 2:00 pm.
               </p>
-              <div className="my-8">
-                <a
-                  href="#"
-                  className="banner-button text-white bg-primary font-bold uppercase ease-in-out duration-300 border border-primary px-8 py-4 hover:bg-base-300 hover:border-white"
-                >
-                  Learn More
-                </a>
-              </div>
             </div>
           </div>
         </div>

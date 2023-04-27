@@ -16,7 +16,7 @@ export default function MyProfile() {
   const { _id, img, name, occupation, location, contactNo } = currentUser;
 
   return (
-    <div>
+    <React.Fragment>
       <PageTitle title="My Profile" />
       <div
         className="flex justify-center items-center lg:px-20"
@@ -80,6 +80,6 @@ export default function MyProfile() {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }

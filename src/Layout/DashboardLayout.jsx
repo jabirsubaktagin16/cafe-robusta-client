@@ -1,11 +1,20 @@
 import React, { useContext } from "react";
 import { AiFillEdit } from "react-icons/ai";
-import { FaHome, FaRegCalendarCheck, FaUserAlt } from "react-icons/fa";
+import {
+  FaBookmark,
+  FaHome,
+  FaRegCalendarCheck,
+  FaUserAlt,
+} from "react-icons/fa";
+import { IoIosAddCircle } from "react-icons/io";
+import { MdEmojiFoodBeverage } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
+import useAdmin from "../hooks/useAdmin";
 
 export default function DashboardLayout() {
   const { user } = useContext(AuthContext);
+  const [isAdmin] = useAdmin(user?.email);
 
   return (
     <div>
@@ -48,7 +57,12 @@ export default function DashboardLayout() {
                 {user?.displayName}
               </h2>
               <p>
-                Signed In as: <span className="font-bold">User</span>
+                Signed In as:{" "}
+                {isAdmin ? (
+                  <span className="font-bold">Admin</span>
+                ) : (
+                  <span className="font-bold">User</span>
+                )}
               </p>
               <p></p>
             </div>
@@ -69,18 +83,43 @@ export default function DashboardLayout() {
                     My Profile
                   </Link>
                 </li>
-                <li className="hover:bg-primary ease-in-out duration-300">
-                  <Link to="/dashboard" className="gap-6">
-                    <FaRegCalendarCheck />
-                    My Bookings
-                  </Link>
-                </li>
-                <li className="hover:bg-primary ease-in-out duration-300">
-                  <Link to="/dashboard/review" className="gap-6">
-                    <AiFillEdit />
-                    Review
-                  </Link>
-                </li>
+                {isAdmin ? (
+                  <React.Fragment>
+                    <li className="hover:bg-primary ease-in-out duration-300">
+                      <Link to="/dashboard/addFood" className="gap-6">
+                        <IoIosAddCircle />
+                        Add New Menu
+                      </Link>
+                    </li>
+                    <li className="hover:bg-primary ease-in-out duration-300">
+                      <Link to="/dashboard/manageMenu" className="gap-6">
+                        <MdEmojiFoodBeverage />
+                        Manage Menu
+                      </Link>
+                    </li>
+                    <li className="hover:bg-primary ease-in-out duration-300">
+                      <Link to="/dashboard/addFood" className="gap-6">
+                        <FaBookmark />
+                        Manage Bookings
+                      </Link>
+                    </li>
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    <li className="hover:bg-primary ease-in-out duration-300">
+                      <Link to="/dashboard" className="gap-6">
+                        <FaRegCalendarCheck />
+                        My Bookings
+                      </Link>
+                    </li>
+                    <li className="hover:bg-primary ease-in-out duration-300">
+                      <Link to="/dashboard/review" className="gap-6">
+                        <AiFillEdit />
+                        Review
+                      </Link>
+                    </li>
+                  </React.Fragment>
+                )}
               </ul>
             </div>
           </div>

@@ -4,7 +4,7 @@ export default function useToken(email) {
   const [token, setToken] = useState("");
   useEffect(() => {
     if (email) {
-      fetch(`http://localhost:8000/api/v1/user/jwt?email=${email}`)
+      fetch(`http://localhost:8000/api/v1/user/jwt/${email}`)
         .then((res) => res.json())
         .then((data) => {
           if (data?.response?.accessToken) {
