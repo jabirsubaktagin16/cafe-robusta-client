@@ -4,14 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/cafe-robusta-logo-white.png";
 import { AuthContext } from "../../contexts/AuthProvider";
 import useAdmin from "../../hooks/useAdmin";
-import Loading from "./Loading";
 
 export default function Header() {
   const { user, logOut } = useContext(AuthContext);
-  const [isAdmin, isAdminLoading] = useAdmin(user?.email);
+  const [isAdmin] = useAdmin(user?.email);
   const navigate = useNavigate();
-
-  if (isAdminLoading) return <Loading />;
 
   const handleLogOut = () => {
     logOut()
