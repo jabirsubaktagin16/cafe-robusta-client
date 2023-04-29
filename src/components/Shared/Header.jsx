@@ -3,9 +3,11 @@ import { GiCoffeeCup } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/cafe-robusta-logo-white.png";
 import { AuthContext } from "../../contexts/AuthProvider";
+import useAdmin from "../../hooks/useAdmin";
 
 export default function Header() {
   const { user, logOut } = useContext(AuthContext);
+  const [isAdmin] = useAdmin(user?.email);
   const navigate = useNavigate();
 
   const handleLogOut = () => {
@@ -53,14 +55,16 @@ export default function Header() {
           <GiCoffeeCup /> About Us
         </Link>
       </li>
-      <li>
-        <Link
-          to="/reservation"
-          className="flex gap-2 items-center py-2 lg:ml-5 uppercase text-white hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide"
-        >
-          <GiCoffeeCup /> Reservation
-        </Link>
-      </li>
+      {!isAdmin && (
+        <li>
+          <Link
+            to="/reservation"
+            className="flex gap-2 items-center py-2 lg:ml-5 uppercase text-white hover:bg-primary md:hover:bg-transparent md:hover:text-primary tracking-wide"
+          >
+            <GiCoffeeCup /> Reservation
+          </Link>
+        </li>
+      )}
     </React.Fragment>
   );
   return (

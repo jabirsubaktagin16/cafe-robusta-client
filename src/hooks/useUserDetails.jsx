@@ -8,7 +8,7 @@ export default function useUserDetails(email) {
   const { logOut } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/v1/user/${email}`, {
+    fetch(`https://cafe-robusta-server.onrender.com/api/v1/user/${email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

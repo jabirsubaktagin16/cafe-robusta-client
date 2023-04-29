@@ -9,12 +9,15 @@ export default function DeleteConfirmModal({
   const { title, _id } = deletingMenu;
 
   const handleDelete = () => {
-    fetch(`http://localhost:8000/api/v1/foods/manageMenu/${_id}`, {
-      method: "DELETE",
-      headers: {
-        authorization: `bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      `https://cafe-robusta-server.onrender.com/api/v1/foods/manageMenu/${_id}`,
+      {
+        method: "DELETE",
+        headers: {
+          authorization: `bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.response.deletedCount > 0) {

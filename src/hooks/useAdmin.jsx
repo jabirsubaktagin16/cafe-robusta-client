@@ -5,7 +5,9 @@ export default function useAdmin(email) {
   const [isAdminLoading, setIsAdminLoading] = useState(true);
   useEffect(() => {
     if (email) {
-      fetch(`http://localhost:8000/api/v1/user/admin/${email}`)
+      fetch(
+        `https://cafe-robusta-server.onrender.com/api/v1/user/admin/${email}`
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

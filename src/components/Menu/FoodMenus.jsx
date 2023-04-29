@@ -8,7 +8,9 @@ export default function FoodMenus({ categoryName }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/v1/foods/category/${categoryName}`)
+    fetch(
+      `https://cafe-robusta-server.onrender.com/api/v1/foods/category/${categoryName}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setMenus(data.response);

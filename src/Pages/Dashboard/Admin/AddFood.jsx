@@ -39,7 +39,7 @@ export default function AddFood() {
           };
 
           // save menu information to the database
-          fetch("http://localhost:8000/api/v1/foods", {
+          fetch("https://cafe-robusta-server.onrender.com/api/v1/foods", {
             method: "POST",
             headers: {
               "content-type": "application/json",

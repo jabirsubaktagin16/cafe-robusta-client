@@ -27,14 +27,17 @@ export default function AddReview() {
       timestamp: new Date(),
     };
 
-    fetch("http://localhost:8000/api/v1/reviews/new-review", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-      body: JSON.stringify(review),
-    })
+    fetch(
+      "https://cafe-robusta-server.onrender.com/api/v1/reviews/new-review",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+        body: JSON.stringify(review),
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         toast.success("Your review was posted successfully");

@@ -51,7 +51,7 @@ export default function SignUp() {
 
   const saveUser = (name, email, contactNo) => {
     const user = { name, email, contactNo };
-    fetch("http://localhost:8000/api/v1/user/users", {
+    fetch("https://cafe-robusta-server.onrender.com/api/v1/user/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",

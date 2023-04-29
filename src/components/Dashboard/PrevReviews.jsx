@@ -17,7 +17,7 @@ export default function PrevReviews() {
     queryKey: ["all-reviews"],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:8000/api/v1/reviews/all-reviews?email=${user?.email}`,
+        `https://cafe-robusta-server.onrender.com/api/v1/reviews/all-reviews?email=${user?.email}`,
         {
           method: "GET",
           headers: {

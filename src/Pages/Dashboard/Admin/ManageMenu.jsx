@@ -15,12 +15,15 @@ export default function ManageMenu() {
   } = useQuery({
     queryKey: ["manageMenu"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:8000/api/v1/foods/manageMenu`, {
-        method: "GET",
-        headers: {
-          authorization: `bearer ${localStorage.getItem("accessToken")}`,
-        },
-      });
+      const res = await fetch(
+        `https://cafe-robusta-server.onrender.com/api/v1/foods/manageMenu`,
+        {
+          method: "GET",
+          headers: {
+            authorization: `bearer ${localStorage.getItem("accessToken")}`,
+          },
+        }
+      );
       if (res.status === 401 || res.status === 403) {
         logOut()
           .then(() => {
