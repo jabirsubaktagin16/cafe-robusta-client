@@ -15,14 +15,18 @@ export default function AboutUs() {
         bgImageAlt="About Us Banner Banner"
         strength={300}
       >
-        <div className="flex items-center justify-center h-[250px] bg-cover bg-no-repeat mb-8 md:h-[400px]">
-          <div className="text-center">
-            <h1 className="text-4xl text-white barlow-font uppercase font-bold">
-              Café Robusta - About Us
-            </h1>
+        <div className="hero h-[250px] md:h-[400px]">
+          <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero-content text-center">
+            <div className="max-w-md">
+              <h1 className="text-4xl text-white barlow-font uppercase font-bold">
+                Café Robusta - About Us
+              </h1>
+            </div>
           </div>
         </div>
       </Parallax>
+
       <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-6 gap-8 my-10 items-center">
         <div>
           <img src={aboutUs} alt="About Us Background" />

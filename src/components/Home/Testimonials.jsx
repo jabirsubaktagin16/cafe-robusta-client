@@ -19,40 +19,33 @@ export default function Testimonials() {
           bgImageAlt="Testimonial Banner"
           strength={300}
         >
-          <div className="">
-            <div className="flex justify-center items-center h-[500px] bg-cover bg-no-repeat mb-8">
-              <div>
+          <div className="hero h-[500px]">
+            <div className="hero-content text-center">
+              <div className="lg:max-w-5xl md:max-w-lg max-w-xs">
                 <h1 className="text-4xl text-start barlow-font coffee-text">
                   What Our Customers Say...
                 </h1>
-                <div className="max-w-screen-sm md:max-w-4xl mt-8">
-                  <Slider
-                    {...settings}
-                    className="text-white text-2xl source-serif-font"
-                  >
-                    <div>
-                      The sun was setting behind the mountains, casting a warm
-                      orange glow over the valley below.
-                    </div>
-                    <div>
-                      She walked down the busy city street, lost in thought as
-                      she dodged the crowds.
-                    </div>
-                    <div>
-                      He sat at his desk, staring at the blank page in front of
-                      him, trying to come up with the perfect opening sentence
-                      for his novel.
-                    </div>
-                  </Slider>
-                </div>
-                <div className="mt-20 text-center">
-                  <a
-                    href="#"
-                    className="banner-button poppins-font tracking-widest font-bold text-white uppercase ease-in-out duration-300 border border-white px-8 py-4 hover:bg-base-300"
-                  >
-                    See More Customer Testimonials
-                  </a>
-                </div>
+                <Slider
+                  {...settings}
+                  className="text-white text-2xl source-serif-font mt-8"
+                >
+                  <div>
+                    The sun was setting behind the mountains, casting a warm
+                    orange glow over the valley below.
+                  </div>
+                  <div>
+                    She walked down the busy city street, lost in thought as she
+                    dodged the crowds.
+                  </div>
+                  <div>
+                    He sat at his desk, staring at the blank page in front of
+                    him, trying to come up with the perfect opening sentence for
+                    his novel.
+                  </div>
+                </Slider>
+                <button className="banner-button poppins-font tracking-widest font-bold text-white uppercase ease-in-out duration-300 border border-white px-8 py-4 hover:bg-base-300 mt-10">
+                  See More Customer Testimonials
+                </button>
               </div>
             </div>
           </div>

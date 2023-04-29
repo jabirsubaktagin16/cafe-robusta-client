@@ -8,14 +8,17 @@ export default function MenuBanner() {
       bgImageAlt="About Us Banner Banner"
       strength={300}
     >
-      <div className="flex items-center justify-center h-[250px] bg-cover bg-no-repeat mb-8 md:h-[400px]">
-        <div className="text-center max-w-full">
-          <h1 className="text-4xl text-white barlow-font uppercase font-bold">
-            Coffees, Drinks & Foods
-          </h1>
-          <p className="mb-5 coffee-text italic source-serif-font">
-            Café Robusta Coffee Shop & Internet Café / Coffees, Drinks & Food
-          </p>
+      <div className="hero h-[250px] md:h-[400px]">
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center">
+          <div className="max-w-md">
+            <h1 className="text-4xl text-white barlow-font uppercase font-bold">
+              Coffees, Drinks & Foods
+            </h1>
+            <p className="mb-5 coffee-text italic source-serif-font">
+              Café Robusta Coffee Shop & Internet Café / Coffees, Drinks & Food
+            </p>
+          </div>
         </div>
       </div>
     </Parallax>
