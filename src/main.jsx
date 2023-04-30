@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
-    <SkeletonTheme baseColor="#dee2e6" highlightColor="#e9ecef">
+    <SkeletonTheme baseColor="#fff2b2" highlightColor="#fff6cc">
       <HelmetProvider>
         <AuthProvider>
           <App />

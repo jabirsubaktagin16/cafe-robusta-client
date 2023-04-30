@@ -22,10 +22,14 @@ export default function FoodMenus({ categoryName }) {
 
   return (
     <>
-      <h1 className="text-4xl tracking-widest text-start barlow-font uppercase font-semibold">
-        {title}
-      </h1>
-      <hr className="h-1 w-3/12 mt-2 mb-8 bg-primary border-0 dark:bg-primary"></hr>
+      {!isLoading && (
+        <>
+          <h1 className="text-4xl tracking-widest text-start barlow-font uppercase font-semibold">
+            {title}
+          </h1>
+          <hr className="h-1 w-3/12 mt-2 mb-8 bg-primary border-0 dark:bg-primary"></hr>
+        </>
+      )}
       {isLoading && <CardSkeleton />}
       {menus.map((menu) => (
         <div className="py-2">

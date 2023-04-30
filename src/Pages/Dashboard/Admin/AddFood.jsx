@@ -51,7 +51,7 @@ export default function AddFood() {
             .then((result) => {
               console.log(result);
               toast.success(`${data.title} is added successfully`);
-              navigate("/dashboard");
+              navigate("/dashboard/manageMenu");
             });
         }
       });
@@ -118,6 +118,8 @@ export default function AddFood() {
                     Flatbread Gourmet Pizzas
                   </option>
                   <option value="Acai Bowls">Acai Bowls</option>
+                  <option value="Salads">Salads</option>
+                  <option value="Snacks and Sweets">Snacks and Sweets</option>
                   <option value="Extras">Extras</option>
                 </select>
                 {errors.category && (

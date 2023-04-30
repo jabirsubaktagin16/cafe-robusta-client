@@ -6,7 +6,7 @@ export default function OtherFoods() {
   return (
     <>
       <ItemBanner title="Food Menu" />
-      <div className="container mx-auto lg:px-20 md:px-10 px-5 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-6 gap-8 my-10">
+      <div className="container mx-auto lg:px-20 md:px-10 px-5 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-6 gap-20 my-10">
         <div>
           <FoodMenus categoryName="Sandwiches and Wraps" />
           <div className="mt-5">
@@ -57,6 +57,12 @@ export default function OtherFoods() {
                 – $0.75)
               </p>
             </div>
+          </div>
+          <div className="mt-5">
+            <FoodMenus categoryName="Salads" />
+          </div>
+          <div className="mt-5">
+            <FoodMenus categoryName="Snacks and Sweets" />
           </div>
         </div>
       </div>
